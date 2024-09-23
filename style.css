@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EE66A6;
+}
+
+/* Navbar Styling */
+#navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #C0EBA6;
+    padding: 10px;
+}
+
+#navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#navbar a:hover {
+    color: #347928;
+}
+
+/* Main Container Flex Layout */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+/* Content Section Styling */
+.content-section {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.content-section h1 {
+    font-size: 3.5rem;
+    color: #7C00FE;
+}
+
+.content-section p {
+    color: brown;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+}
+
+form fieldset {
+    border: 1px solid #F9E400;
+    padding: 10px;
+}
+
+/* Image Section with Slider */
+.image-section {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    animation: slide 12s infinite;
+}
+
+.slider img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slider img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.slider img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.slider img:nth-child(4) {
+    animation-delay: 9s;
+}
+
+/* Slide Animation */
+@keyframes slide {
+    0%, 25% {
+        left: 100%;
+    }
+    30%, 55% {
+        left: 0;
+    }
+    60%, 100% {
+        left: -100%;
+    }
+}
+
+/* Animated Heading */
+.animated-heading {
+    font-size: 3rem;
+    animation: text-flicker 3s infinite;
+    color: #FF6347;
+}
+
+@keyframes text-flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-section {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .slider {
+        width: 100%;
+        height: auto;
+    }
+}
+
+h6{
+    display: flex;
+    justify-content: center;
+}
